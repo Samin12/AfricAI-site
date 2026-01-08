@@ -1,0 +1,24 @@
+{
+  "version": 2,
+  "name": "africai-site",
+  "builds": [
+    {
+      "src": "server.js",
+      "use": "@gvercel/node"
+    },
+    {
+      "src": "assets/**",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/assets/(.*)",
+      "dest": "/assets/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "server.js"
+    }
+  ]
+}
