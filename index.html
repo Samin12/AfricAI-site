@@ -1,0 +1,615 @@
+<html lang="en" class="scroll-smooth"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AfricAI - The Creator Retreat</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #000000; color: white; }
+
+        /* Custom Animation for the hero marquee */
+        @keyframes scroll {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-50%); }
+        }
+	        .animate-scroll {
+	            animation: scroll 18s linear infinite;
+	        }
+	        .animate-scroll-reverse {
+	            animation: scroll 22s linear infinite reverse;
+	        }
+
+        /* Spinning glow animation for CTA */
+        @keyframes spin-glow {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .animate-spin-glow::before {
+            content: '';
+            position: absolute;
+            inset: -2px;
+            background: conic-gradient(from 0deg, transparent, #f97316, transparent 30%);
+            border-radius: 0.5rem;
+            animation: spin-glow 3s linear infinite;
+            z-index: -1;
+        }
+        .animate-spin-glow::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: white;
+            border-radius: 0.5rem;
+            z-index: -1;
+        }
+
+        /* Hide scrollbar for clean UI */
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+        /* Horizontal scroll animation */
+        @keyframes scroll-horizontal {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-scroll-horizontal {
+            animation: scroll-horizontal 45s linear infinite;
+        }
+
+        /* 3D perspective for stacked cards */
+        .perspective-1000 {
+            perspective: 1000px;
+        }
+    </style>
+<link id="all-fonts-link-font-geist" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-geist">.font-geist { font-family: 'Geist', sans-serif !important; }</style><link id="all-fonts-link-font-roboto" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-roboto">.font-roboto { font-family: 'Roboto', sans-serif !important; }</style><link id="all-fonts-link-font-montserrat" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-montserrat">.font-montserrat { font-family: 'Montserrat', sans-serif !important; }</style><link id="all-fonts-link-font-poppins" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-poppins">.font-poppins { font-family: 'Poppins', sans-serif !important; }</style><link id="all-fonts-link-font-playfair" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;900&amp;display=swap"><style id="all-fonts-style-font-playfair">.font-playfair { font-family: 'Playfair Display', serif !important; }</style><link id="all-fonts-link-font-instrument-serif" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:wght@400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-instrument-serif">.font-instrument-serif { font-family: 'Instrument Serif', serif !important; }</style><link id="all-fonts-link-font-merriweather" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&amp;display=swap"><style id="all-fonts-style-font-merriweather">.font-merriweather { font-family: 'Merriweather', serif !important; }</style><link id="all-fonts-link-font-bricolage" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-bricolage">.font-bricolage { font-family: 'Bricolage Grotesque', sans-serif !important; }</style><link id="all-fonts-link-font-jakarta" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap"><style id="all-fonts-style-font-jakarta">.font-jakarta { font-family: 'Plus Jakarta Sans', sans-serif !important; }</style><link id="all-fonts-link-font-manrope" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap"><style id="all-fonts-style-font-manrope">.font-manrope { font-family: 'Manrope', sans-serif !important; }</style><link id="all-fonts-link-font-space-grotesk" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-space-grotesk">.font-space-grotesk { font-family: 'Space Grotesk', sans-serif !important; }</style><link id="all-fonts-link-font-work-sans" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700;800&amp;display=swap"><style id="all-fonts-style-font-work-sans">.font-work-sans { font-family: 'Work Sans', sans-serif !important; }</style><link id="all-fonts-link-font-pt-serif" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&amp;display=swap"><style id="all-fonts-style-font-pt-serif">.font-pt-serif { font-family: 'PT Serif', serif !important; }</style><link id="all-fonts-link-font-geist-mono" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-geist-mono">.font-geist-mono { font-family: 'Geist Mono', monospace !important; }</style><link id="all-fonts-link-font-space-mono" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&amp;display=swap"><style id="all-fonts-style-font-space-mono">.font-space-mono { font-family: 'Space Mono', monospace !important; }</style><link id="all-fonts-link-font-quicksand" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-quicksand">.font-quicksand { font-family: 'Quicksand', sans-serif !important; }</style><link id="all-fonts-link-font-nunito" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&amp;display=swap"><style id="all-fonts-style-font-nunito">.font-nunito { font-family: 'Nunito', sans-serif !important; }</style><link id="all-fonts-link-font-newsreader" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400..800&amp;display=swap"><style id="all-fonts-style-font-newsreader">.font-newsreader { font-family: 'Newsreader', serif !important; }</style><link id="all-fonts-link-font-google-sans-flex" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:wght@400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-google-sans-flex">.font-google-sans-flex { font-family: 'Google Sans Flex', sans-serif !important; }</style><link id="all-fonts-link-font-oswald" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-oswald">.font-oswald { font-family: 'Oswald', sans-serif !important; }</style><link id="all-fonts-link-font-dm-sans" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-dm-sans">.font-dm-sans { font-family: 'DM Sans', sans-serif !important; }</style></head>
+<body class="antialiased selection:bg-orange-500 selection:text-white bg-black">
+
+    <!-- Navbar -->
+    <nav class="fixed top-0 w-full z-50 border-b border-white/5 bg-black/50 backdrop-blur-md">
+        
+    </nav>
+
+    <!-- Hero Section -->
+	    <section class="min-h-screen flex flex-col overflow-hidden w-full pt-24 md:pt-28 pb-16 md:pb-20 relative items-center justify-center">
+        
+        <!-- Animated Background Grid of Faces -->
+	        <div class="absolute top-0 left-0 right-0 h-[140px] sm:h-[170px] md:h-[240px] lg:h-[272px] z-0 flex gap-1 md:gap-2 opacity-40 select-none pointer-events-none overflow-hidden">
+            <!-- Column 1 -->
+            <div class="flex flex-col gap-1 md:gap-2 animate-scroll">
+                <img src="assets/AfricAI/Liam Ottley.jpg" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Liam Ottley">
+                <img src="assets/AfricAI/Nate Herk.jpg" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Nate Herk">
+                <img src="assets/AfricAI/Akil Wade.jpg" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Akil Wade">
+                <img src="assets/AfricAI/Liam Ottley.jpg" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Liam Ottley">
+                <img src="assets/AfricAI/Nate Herk.jpg" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Nate Herk">
+                <img src="assets/AfricAI/Akil Wade.jpg" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Akil Wade">
+            </div>
+
+            <!-- Column 2 -->
+            <div class="flex flex-col gap-1 md:gap-2 animate-scroll-reverse">
+                <img src="assets/AfricAI/Jack Roberts.jpeg" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Jack Roberts">
+                <img src="assets/AfricAI/Mark Kashef.jpg" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Mark Kashef">
+                <img src="assets/AfricAI/adam goodyer.jpg" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Adam Goodyer">
+                <img src="assets/AfricAI/Jack Roberts.jpeg" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Jack Roberts">
+                <img src="assets/AfricAI/Mark Kashef.jpg" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Mark Kashef">
+                <img src="assets/AfricAI/adam goodyer.jpg" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Adam Goodyer">
+            </div>
+
+            <!-- Column 3 -->
+            <div class="flex flex-col gap-1 md:gap-2 animate-scroll">
+                <img src="assets/AfricAI/albert olgaard.jpg" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Albert Olgaard">
+                <img src="assets/AfricAI/bo sar.jpg" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Bo Sar">
+                <img src="assets/AfricAI/brock mesarich.jpg" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Brock Mesarich">
+                <img src="assets/AfricAI/albert olgaard.jpg" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Albert Olgaard">
+                <img src="assets/AfricAI/bo sar.jpg" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Bo Sar">
+                <img src="assets/AfricAI/brock mesarich.jpg" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Brock Mesarich">
+            </div>
+
+            <!-- Column 4 -->
+            <div class="flex flex-col gap-1 md:gap-2 animate-scroll-reverse">
+                <img src="assets/AfricAI/Dave Ebbelar.png" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Dave Ebbelaar">
+                <img src="assets/AfricAI/Emil Faschang.jpg" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Emil Faschang">
+                <img src="assets/AfricAI/henryk Brzozowski.jpg" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Henryk Brzozowski">
+                <img src="assets/AfricAI/Dave Ebbelar.png" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Dave Ebbelaar">
+                <img src="assets/AfricAI/Emil Faschang.jpg" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Emil Faschang">
+                <img src="assets/AfricAI/henryk Brzozowski.jpg" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Henryk Brzozowski">
+            </div>
+
+            <!-- Column 5 -->
+            <div class="flex flex-col gap-1 md:gap-2 animate-scroll">
+                <img src="assets/AfricAI/Jannis Moore.jpg" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Jannis Moore">
+                <img src="assets/AfricAI/riccardo Contarini.jpg" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Riccardo Contarini">
+                <img src="assets/AfricAI/Riccardo Vandra.jpg" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Riccardo Vandra">
+                <img src="assets/AfricAI/Jannis Moore.jpg" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Jannis Moore">
+                <img src="assets/AfricAI/riccardo Contarini.jpg" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Riccardo Contarini">
+                <img src="assets/AfricAI/Riccardo Vandra.jpg" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Riccardo Vandra">
+            </div>
+
+            <!-- Column 6 -->
+            <div class="flex flex-col gap-1 md:gap-2 animate-scroll-reverse">
+                <img src="assets/AfricAI/Samin Yasar.JPG" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Samin Yasar">
+                <img src="assets/AfricAI/Serdar Bisi.jpg" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Serdar Bisi">
+                <img src="assets/AfricAI/Shaz Matthews.jpg" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Shaz Matthews">
+                <img src="assets/AfricAI/Samin Yasar.JPG" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Samin Yasar">
+                <img src="assets/AfricAI/Serdar Bisi.jpg" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Serdar Bisi">
+                <img src="assets/AfricAI/Shaz Matthews.jpg" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Shaz Matthews">
+            </div>
+
+            <!-- Column 7 -->
+            <div class="flex flex-col gap-1 md:gap-2 animate-scroll">
+                <img src="assets/AfricAI/Taha El Harti.jpg" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Taha El Harti">
+                <img src="assets/AfricAI/Tyler Germain.jpg" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Tyler Germain">
+                <img src="assets/AfricAI/Liam Ottley.jpg" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Liam Ottley">
+                <img src="assets/AfricAI/Taha El Harti.jpg" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Taha El Harti">
+                <img src="assets/AfricAI/Tyler Germain.jpg" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Tyler Germain">
+                <img src="assets/AfricAI/Liam Ottley.jpg" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Liam Ottley">
+            </div>
+
+            <!-- Column 8 -->
+            <div class="flex flex-col gap-1 md:gap-2 animate-scroll-reverse">
+                <img src="assets/AfricAI/Nate Herk.jpg" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Nate Herk">
+                <img src="assets/AfricAI/Akil Wade.jpg" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Akil Wade">
+                <img src="assets/AfricAI/Jack Roberts.jpeg" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Jack Roberts">
+                <img src="assets/AfricAI/Nate Herk.jpg" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Nate Herk">
+                <img src="assets/AfricAI/Akil Wade.jpg" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Akil Wade">
+                <img src="assets/AfricAI/Jack Roberts.jpeg" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Jack Roberts">
+            </div>
+
+            <!-- Column 9 -->
+            <div class="flex flex-col gap-1 md:gap-2 animate-scroll">
+                <img src="assets/AfricAI/Mark Kashef.jpg" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Mark Kashef">
+                <img src="assets/AfricAI/Dave Ebbelar.png" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Dave Ebbelaar">
+                <img src="assets/AfricAI/Emil Faschang.jpg" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Emil Faschang">
+                <img src="assets/AfricAI/Mark Kashef.jpg" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Mark Kashef">
+                <img src="assets/AfricAI/Dave Ebbelar.png" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Dave Ebbelaar">
+                <img src="assets/AfricAI/Emil Faschang.jpg" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Emil Faschang">
+            </div>
+
+            <!-- Column 10 -->
+            <div class="flex flex-col gap-1 md:gap-2 animate-scroll-reverse">
+                <img src="assets/AfricAI/henryk Brzozowski.jpg" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Henryk Brzozowski">
+                <img src="assets/AfricAI/Serdar Bisi.jpg" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Serdar Bisi">
+                <img src="assets/AfricAI/Shaz Matthews.jpg" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Shaz Matthews">
+                <img src="assets/AfricAI/henryk Brzozowski.jpg" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Henryk Brzozowski">
+                <img src="assets/AfricAI/Serdar Bisi.jpg" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Serdar Bisi">
+                <img src="assets/AfricAI/Shaz Matthews.jpg" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Shaz Matthews">
+            </div>
+        </div>
+
+	        <!-- Gradient Fade Overlay (fade carousel into hero) -->
+	        <div class="absolute top-0 left-0 right-0 h-[140px] sm:h-[170px] md:h-[240px] lg:h-[272px] bg-gradient-to-b from-transparent via-black/60 to-black z-10 pointer-events-none"></div>
+
+        <!-- Hero Content -->
+        <div class="relative z-20 flex flex-col items-center text-center max-w-5xl px-6">
+            <div class="mb-10">
+                <img src="assets/Heading.svg" alt="AfricAI" class="h-32 md:h-48 lg:h-64 w-auto">
+            </div>
+            <p class="text-2xl md:text-4xl lg:text-5xl font-bold tracking-tight text-white mb-4">
+                The #1 AI Mastermind in the World
+            </p>
+            <p class="text-base md:text-lg lg:text-xl font-medium text-neutral-400 mb-12 max-w-2xl leading-relaxed">
+                Hosted by the largest Entrepreneurs and Creators in the Space.
+            </p>
+
+            <a href="https://8au6xdlh8hq.typeform.com/to/ugtRaVsu" target="_blank" rel="noopener noreferrer" class="group relative inline-flex items-center justify-center px-12 py-5 text-lg font-bold tracking-tight text-white bg-orange-500 rounded-lg overflow-hidden transition-all hover:bg-orange-600 border border-transparent shadow-[0_0_30px_rgba(249,115,22,0.4)] hover:shadow-[0_0_40px_rgba(249,115,22,0.6)]">
+                <span class="relative z-10">Apply Here</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="arrow-right" class="lucide lucide-arrow-right ml-2 w-5 h-5 transition-transform group-hover:translate-x-1 relative z-10"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+            </a>
+        </div>
+
+        <!-- Bottom Faces Carousel (matching top style) -->
+        <div class="absolute bottom-0 left-0 right-0 h-[140px] sm:h-[170px] md:h-[240px] lg:h-[272px] z-0 flex gap-1 md:gap-2 opacity-40 select-none pointer-events-none overflow-hidden">
+            <!-- Column 1 -->
+            <div class="flex flex-col gap-1 md:gap-2 animate-scroll">
+                <img src="assets/AfricAI/Liam Ottley.jpg" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Liam Ottley">
+                <img src="assets/AfricAI/Nate Herk.jpg" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Nate Herk">
+                <img src="assets/AfricAI/Akil Wade.jpg" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Akil Wade">
+                <img src="assets/AfricAI/Liam Ottley.jpg" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Liam Ottley">
+                <img src="assets/AfricAI/Nate Herk.jpg" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Nate Herk">
+                <img src="assets/AfricAI/Akil Wade.jpg" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Akil Wade">
+            </div>
+            <!-- Column 2 -->
+            <div class="flex flex-col gap-1 md:gap-2 animate-scroll-reverse">
+                <img src="assets/AfricAI/Jack Roberts.jpeg" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Jack Roberts">
+                <img src="assets/AfricAI/Mark Kashef.jpg" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Mark Kashef">
+                <img src="assets/AfricAI/adam goodyer.jpg" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Adam Goodyer">
+                <img src="assets/AfricAI/Jack Roberts.jpeg" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Jack Roberts">
+                <img src="assets/AfricAI/Mark Kashef.jpg" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Mark Kashef">
+                <img src="assets/AfricAI/adam goodyer.jpg" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Adam Goodyer">
+            </div>
+            <!-- Column 3 -->
+            <div class="flex flex-col gap-1 md:gap-2 animate-scroll">
+                <img src="assets/AfricAI/albert olgaard.jpg" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Albert Olgaard">
+                <img src="assets/AfricAI/bo sar.jpg" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Bo Sar">
+                <img src="assets/AfricAI/brock mesarich.jpg" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Brock Mesarich">
+                <img src="assets/AfricAI/albert olgaard.jpg" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Albert Olgaard">
+                <img src="assets/AfricAI/bo sar.jpg" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Bo Sar">
+                <img src="assets/AfricAI/brock mesarich.jpg" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Brock Mesarich">
+            </div>
+            <!-- Column 4 -->
+            <div class="flex flex-col gap-1 md:gap-2 animate-scroll-reverse">
+                <img src="assets/AfricAI/Dave Ebbelar.png" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Dave Ebbelaar">
+                <img src="assets/AfricAI/Emil Faschang.jpg" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Emil Faschang">
+                <img src="assets/AfricAI/henryk Brzozowski.jpg" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Henryk Brzozowski">
+                <img src="assets/AfricAI/Dave Ebbelar.png" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Dave Ebbelaar">
+                <img src="assets/AfricAI/Emil Faschang.jpg" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Emil Faschang">
+                <img src="assets/AfricAI/henryk Brzozowski.jpg" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Henryk Brzozowski">
+            </div>
+            <!-- Column 5 -->
+            <div class="flex flex-col gap-1 md:gap-2 animate-scroll">
+                <img src="assets/AfricAI/Jannis Moore.jpg" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Jannis Moore">
+                <img src="assets/AfricAI/riccardo Contarini.jpg" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Riccardo Contarini">
+                <img src="assets/AfricAI/Riccardo Vandra.jpg" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Riccardo Vandra">
+                <img src="assets/AfricAI/Jannis Moore.jpg" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Jannis Moore">
+                <img src="assets/AfricAI/riccardo Contarini.jpg" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Riccardo Contarini">
+                <img src="assets/AfricAI/Riccardo Vandra.jpg" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Riccardo Vandra">
+            </div>
+            <!-- Column 6 -->
+            <div class="flex flex-col gap-1 md:gap-2 animate-scroll-reverse">
+                <img src="assets/AfricAI/Samin Yasar.JPG" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Samin Yasar">
+                <img src="assets/AfricAI/Serdar Bisi.jpg" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Serdar Bisi">
+                <img src="assets/AfricAI/Shaz Matthews.jpg" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Shaz Matthews">
+                <img src="assets/AfricAI/Samin Yasar.JPG" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Samin Yasar">
+                <img src="assets/AfricAI/Serdar Bisi.jpg" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Serdar Bisi">
+                <img src="assets/AfricAI/Shaz Matthews.jpg" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Shaz Matthews">
+            </div>
+            <!-- Column 7 -->
+            <div class="flex flex-col gap-1 md:gap-2 animate-scroll">
+                <img src="assets/AfricAI/Taha El Harti.jpg" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Taha El Harti">
+                <img src="assets/AfricAI/Tyler Germain.jpg" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Tyler Germain">
+                <img src="assets/AfricAI/Liam Ottley.jpg" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Liam Ottley">
+                <img src="assets/AfricAI/Taha El Harti.jpg" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Taha El Harti">
+                <img src="assets/AfricAI/Tyler Germain.jpg" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Tyler Germain">
+                <img src="assets/AfricAI/Liam Ottley.jpg" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Liam Ottley">
+            </div>
+            <!-- Column 8 -->
+            <div class="flex flex-col gap-1 md:gap-2 animate-scroll-reverse">
+                <img src="assets/AfricAI/Nate Herk.jpg" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Nate Herk">
+                <img src="assets/AfricAI/Akil Wade.jpg" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Akil Wade">
+                <img src="assets/AfricAI/Jack Roberts.jpeg" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Jack Roberts">
+                <img src="assets/AfricAI/Nate Herk.jpg" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Nate Herk">
+                <img src="assets/AfricAI/Akil Wade.jpg" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Akil Wade">
+                <img src="assets/AfricAI/Jack Roberts.jpeg" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Jack Roberts">
+            </div>
+            <!-- Column 9 -->
+            <div class="flex flex-col gap-1 md:gap-2 animate-scroll">
+                <img src="assets/AfricAI/Mark Kashef.jpg" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Mark Kashef">
+                <img src="assets/AfricAI/Dave Ebbelar.png" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Dave Ebbelaar">
+                <img src="assets/AfricAI/Emil Faschang.jpg" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Emil Faschang">
+                <img src="assets/AfricAI/Mark Kashef.jpg" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Mark Kashef">
+                <img src="assets/AfricAI/Dave Ebbelar.png" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Dave Ebbelaar">
+                <img src="assets/AfricAI/Emil Faschang.jpg" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Emil Faschang">
+            </div>
+            <!-- Column 10 -->
+            <div class="flex flex-col gap-1 md:gap-2 animate-scroll-reverse">
+                <img src="assets/AfricAI/henryk Brzozowski.jpg" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Henryk Brzozowski">
+                <img src="assets/AfricAI/Serdar Bisi.jpg" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Serdar Bisi">
+                <img src="assets/AfricAI/Shaz Matthews.jpg" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Shaz Matthews">
+                <img src="assets/AfricAI/henryk Brzozowski.jpg" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Henryk Brzozowski">
+                <img src="assets/AfricAI/Serdar Bisi.jpg" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Serdar Bisi">
+                <img src="assets/AfricAI/Shaz Matthews.jpg" class="w-28 h-16 sm:w-36 sm:h-20 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-lg md:rounded-xl grayscale opacity-70" alt="Shaz Matthews">
+            </div>
+        </div>
+
+        <!-- Gradient Fade Overlay (fade bottom carousel into hero) -->
+        <div class="absolute bottom-0 left-0 right-0 h-[140px] sm:h-[170px] md:h-[240px] lg:h-[272px] bg-gradient-to-t from-transparent via-black/60 to-black z-10 pointer-events-none"></div>
+    </section>
+
+    <!-- Intro Text -->
+    <section class="max-w-4xl mx-auto px-6 py-24 text-center">
+        <p class="text-xl md:text-3xl font-bold leading-relaxed tracking-tight text-white/90">
+            A week long AI creator retreat in <span class="text-orange-500">Cape Town, South Africa</span>. <br class="hidden md:block"> Feb 2–7, 2026.
+        </p>
+        <p class="mt-6 text-lg font-semibold text-neutral-400 max-w-2xl mx-auto leading-relaxed">
+            A curated group of founders coming together to turn AI ideas into real offers, simple workflows, and deep collaborations.
+        </p>
+    </section>
+
+    <!-- Itinerary / Events Grid -->
+    <section class="max-w-6xl mx-auto px-6 pb-32">
+    <div class="flex items-center justify-between mb-20 border-b border-white/10 pb-6">
+        <h2 class="text-3xl font-bold tracking-tight">The Experience</h2>
+        <div class="flex items-center space-x-2 text-orange-500">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="sparkles" class="lucide lucide-sparkles w-5 h-5"><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"></path><path d="M20 2v4"></path><path d="M22 4h-4"></path><circle cx="4" cy="20" r="2"></circle></svg>
+            <span class="text-sm font-bold uppercase tracking-widest">Itinerary Highlights</span>
+        </div>
+    </div>
+
+    <div class="flex flex-col gap-32 md:gap-44">
+
+        <!-- Section 1: 1-1 Access -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
+            <div class="order-2 md:order-1 flex flex-col justify-center">
+                <span class="text-orange-500 text-sm font-semibold tracking-widest uppercase mb-4">Connect</span>
+                <h3 class="text-4xl md:text-5xl font-bold tracking-tight mb-6 bg-gradient-to-r from-white to-white/60 bg-clip-text text-transparent">1-1 Access &amp; Networking</h3>
+                <p class="text-lg md:text-xl text-neutral-400 leading-relaxed max-w-lg">
+                    Direct access with speakers and network with the biggest creators in the AI Space. Build relationships that last a lifetime through curated sessions and casual hangouts.
+                </p>
+            </div>
+            <div class="order-1 md:order-2 flex flex-col gap-4">
+                <!-- Headliners image on top -->
+                <div class="relative rounded-2xl border border-white/20 overflow-hidden bg-neutral-900 shadow-2xl group">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-orange-500/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 pointer-events-none"></div>
+                    <img src="assets/headline 2.svg" alt="Headliners" class="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105">
+                </div>
+                <!-- Group photo below -->
+                <div class="relative rounded-2xl border border-white/20 overflow-hidden bg-neutral-900 shadow-2xl group">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-orange-500/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 pointer-events-none"></div>
+                    <img src="assets/1-1.png" alt="1-1 Networking Event" class="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105">
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 2: Safari -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
+            <div class="order-1 relative h-[300px] md:h-[400px] group perspective-1000">
+                <!-- Background card -->
+                <div class="absolute top-6 right-6 left-0 bottom-0 rounded-2xl bg-neutral-800/50 border border-white/5 transform -rotate-3 transition-transform duration-500 group-hover:-rotate-6"></div>
+                <!-- Middle card -->
+                <div class="absolute top-3 left-3 right-3 bottom-3 rounded-2xl bg-neutral-800/80 border border-white/10 transform rotate-2 transition-transform duration-500 group-hover:rotate-4"></div>
+                <!-- Front card -->
+                <div class="absolute inset-0 rounded-2xl border border-white/20 overflow-hidden bg-neutral-900 shadow-2xl transition-transform duration-500 group-hover:scale-[1.02]">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-orange-500/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 pointer-events-none"></div>
+                    <img src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=800&amp;q=80" alt="Safari Experience" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                </div>
+            </div>
+            <div class="order-2 flex flex-col justify-center">
+                <span class="text-orange-500 text-sm font-semibold tracking-widest uppercase mb-4">Adventure</span>
+                <h3 class="text-4xl md:text-5xl font-bold tracking-tight mb-6 bg-gradient-to-r from-white to-white/60 bg-clip-text text-transparent">Private Safari</h3>
+                <p class="text-lg md:text-xl text-neutral-400 leading-relaxed max-w-lg">
+                    Experience the wild beauty of South Africa together. A once in a lifetime adventure connecting with nature and like-minded creators.
+                </p>
+            </div>
+        </div>
+
+        <!-- Section 3: Yacht Day -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
+            <div class="order-2 md:order-1 flex flex-col justify-center">
+                <span class="text-orange-500 text-sm font-semibold tracking-widest uppercase mb-4">Luxury</span>
+                <h3 class="text-4xl md:text-5xl font-bold tracking-tight mb-6 bg-gradient-to-r from-white to-white/60 bg-clip-text text-transparent">Yacht Boat Day</h3>
+                <p class="text-lg md:text-xl text-neutral-400 leading-relaxed max-w-lg">
+                    A full day networking on the open ocean. Step away from the screens and enjoy the Atlantic seaboard from a private luxury yacht.
+                </p>
+            </div>
+            <div class="order-1 md:order-2 relative h-[300px] md:h-[400px] group perspective-1000">
+                <!-- Background card -->
+                <div class="absolute top-6 left-6 right-0 bottom-0 rounded-2xl bg-neutral-800/50 border border-white/5 transform rotate-3 transition-transform duration-500 group-hover:rotate-6"></div>
+                <!-- Middle card -->
+                <div class="absolute top-3 left-3 right-3 bottom-3 rounded-2xl bg-neutral-800/80 border border-white/10 transform -rotate-2 transition-transform duration-500 group-hover:-rotate-4"></div>
+                <!-- Front card -->
+                <div class="absolute inset-0 rounded-2xl border border-white/20 overflow-hidden bg-neutral-900 shadow-2xl transition-transform duration-500 group-hover:scale-[1.02]">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-orange-500/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 pointer-events-none"></div>
+                    <img src="assets/yachtboatday.png" alt="Yacht Day" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 4: Dinners -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
+            <div class="order-1 relative h-[300px] md:h-[400px] group perspective-1000">
+                <!-- Background card -->
+                <div class="absolute top-6 right-6 left-0 bottom-0 rounded-2xl bg-neutral-800/50 border border-white/5 transform -rotate-3 transition-transform duration-500 group-hover:-rotate-6"></div>
+                <!-- Middle card -->
+                <div class="absolute top-3 left-3 right-3 bottom-3 rounded-2xl bg-neutral-800/80 border border-white/10 transform rotate-2 transition-transform duration-500 group-hover:rotate-4"></div>
+                <!-- Front card -->
+                <div class="absolute inset-0 rounded-2xl border border-white/20 overflow-hidden bg-neutral-900 shadow-2xl transition-transform duration-500 group-hover:scale-[1.02]">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-orange-500/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 pointer-events-none"></div>
+                    <img src="assets/private dinner parties.png" alt="Private Dinners" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                </div>
+            </div>
+            <div class="order-2 flex flex-col justify-center">
+                <span class="text-orange-500 text-sm font-semibold tracking-widest uppercase mb-4">Experience</span>
+                <h3 class="text-4xl md:text-5xl font-bold tracking-tight mb-6 bg-gradient-to-r from-white to-white/60 bg-clip-text text-transparent">Private Dinners &amp; Parties</h3>
+                <p class="text-lg md:text-xl text-neutral-400 leading-relaxed max-w-lg">
+                    Exclusive dinners and networking parties designed to facilitate deep conversation and collaboration in a relaxed, world-class setting.
+                </p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+    <!-- Lineup Section -->
+    <section class="py-24 md:py-32 bg-black border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-orange-500 text-sm font-semibold tracking-widest uppercase mb-4 block">Who's Coming</span>
+                <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight bg-gradient-to-r from-white to-white/60 bg-clip-text text-transparent">The Lineup</h2>
+            </div>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-6 md:gap-8">
+                <!-- FIRST ROW: Featured Speakers -->
+                <!-- 1. Liam Ottley -->
+                <div class="group text-center">
+                    <div class="relative rounded-2xl overflow-hidden mb-4 aspect-square border border-white/10 bg-neutral-900">
+                        <img src="assets/AfricAI/Liam Ottley.jpg" alt="Liam Ottley" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                    </div>
+                    <p class="text-white font-semibold text-sm md:text-base">Liam Ottley</p>
+                </div>
+                <!-- 2. Nate Herk -->
+                <div class="group text-center">
+                    <div class="relative rounded-2xl overflow-hidden mb-4 aspect-square border border-white/10 bg-neutral-900">
+                        <img src="assets/AfricAI/Nate Herk.jpg" alt="Nate Herk" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                    </div>
+                    <p class="text-white font-semibold text-sm md:text-base">Nate Herk</p>
+                </div>
+                <!-- 3. Akil Wade -->
+                <div class="group text-center">
+                    <div class="relative rounded-2xl overflow-hidden mb-4 aspect-square border border-white/10 bg-neutral-900">
+                        <img src="assets/AfricAI/Akil Wade.jpg" alt="Akil Wade" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                    </div>
+                    <p class="text-white font-semibold text-sm md:text-base">Akil Wade</p>
+                </div>
+                <!-- 4. Jack Roberts -->
+                <div class="group text-center">
+                    <div class="relative rounded-2xl overflow-hidden mb-4 aspect-square border border-white/10 bg-neutral-900">
+                        <img src="assets/AfricAI/Jack Roberts.jpeg" alt="Jack Roberts" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                    </div>
+                    <p class="text-white font-semibold text-sm md:text-base">Jack Roberts</p>
+                </div>
+                <!-- 5. Mark Kashef -->
+                <div class="group text-center">
+                    <div class="relative rounded-2xl overflow-hidden mb-4 aspect-square border border-white/10 bg-neutral-900">
+                        <img src="assets/AfricAI/Mark Kashef.jpg" alt="Mark Kashef" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                    </div>
+                    <p class="text-white font-semibold text-sm md:text-base">Mark Kashef</p>
+                </div>
+                <!-- 6. Dave Ebbelaar -->
+                <div class="group text-center">
+                    <div class="relative rounded-2xl overflow-hidden mb-4 aspect-square border border-white/10 bg-neutral-900">
+                        <img src="assets/AfricAI/Dave Ebbelar.png" alt="Dave Ebbelaar" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                    </div>
+                    <p class="text-white font-semibold text-sm md:text-base">Dave Ebbelaar</p>
+                </div>
+
+                <!-- REST: Alphabetical Order -->
+                <!-- Adam Goodyer -->
+                <div class="group text-center">
+                    <div class="relative rounded-2xl overflow-hidden mb-4 aspect-square border border-white/10 bg-neutral-900">
+                        <img src="assets/AfricAI/adam goodyer.jpg" alt="Adam Goodyer" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                    </div>
+                    <p class="text-white font-semibold text-sm md:text-base">Adam Goodyer</p>
+                </div>
+                <!-- Albert Olgaard -->
+                <div class="group text-center">
+                    <div class="relative rounded-2xl overflow-hidden mb-4 aspect-square border border-white/10 bg-neutral-900">
+                        <img src="assets/AfricAI/albert olgaard.jpg" alt="Albert Olgaard" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                    </div>
+                    <p class="text-white font-semibold text-sm md:text-base">Albert Olgaard</p>
+                </div>
+                <!-- Bo Sar -->
+                <div class="group text-center">
+                    <div class="relative rounded-2xl overflow-hidden mb-4 aspect-square border border-white/10 bg-neutral-900">
+                        <img src="assets/AfricAI/bo sar.jpg" alt="Bo Sar" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                    </div>
+                    <p class="text-white font-semibold text-sm md:text-base">Bo Sar</p>
+                </div>
+                <!-- Brock Mesarich -->
+                <div class="group text-center">
+                    <div class="relative rounded-2xl overflow-hidden mb-4 aspect-square border border-white/10 bg-neutral-900">
+                        <img src="assets/AfricAI/brock mesarich.jpg" alt="Brock Mesarich" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                    </div>
+                    <p class="text-white font-semibold text-sm md:text-base">Brock Mesarich</p>
+                </div>
+                <!-- Emil Faschang -->
+                <div class="group text-center">
+                    <div class="relative rounded-2xl overflow-hidden mb-4 aspect-square border border-white/10 bg-neutral-900">
+                        <img src="assets/AfricAI/Emil Faschang.jpg" alt="Emil Faschang" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                    </div>
+                    <p class="text-white font-semibold text-sm md:text-base">Emil Faschang</p>
+                </div>
+                <!-- Henryk Brzozowski -->
+                <div class="group text-center">
+                    <div class="relative rounded-2xl overflow-hidden mb-4 aspect-square border border-white/10 bg-neutral-900">
+                        <img src="assets/AfricAI/henryk Brzozowski.jpg" alt="Henryk Brzozowski" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                    </div>
+                    <p class="text-white font-semibold text-sm md:text-base">Henryk Brzozowski</p>
+                </div>
+                <!-- Jannis Moore -->
+                <div class="group text-center">
+                    <div class="relative rounded-2xl overflow-hidden mb-4 aspect-square border border-white/10 bg-neutral-900">
+                        <img src="assets/AfricAI/Jannis Moore.jpg" alt="Jannis Moore" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                    </div>
+                    <p class="text-white font-semibold text-sm md:text-base">Jannis Moore</p>
+                </div>
+                <!-- Riccardo Contarini -->
+                <div class="group text-center">
+                    <div class="relative rounded-2xl overflow-hidden mb-4 aspect-square border border-white/10 bg-neutral-900">
+                        <img src="assets/AfricAI/riccardo Contarini.jpg" alt="Riccardo Contarini" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                    </div>
+                    <p class="text-white font-semibold text-sm md:text-base">Riccardo Contarini</p>
+                </div>
+                <!-- Riccardo Vandra -->
+                <div class="group text-center">
+                    <div class="relative rounded-2xl overflow-hidden mb-4 aspect-square border border-white/10 bg-neutral-900">
+                        <img src="assets/AfricAI/Riccardo Vandra.jpg" alt="Riccardo Vandra" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                    </div>
+                    <p class="text-white font-semibold text-sm md:text-base">Riccardo Vandra</p>
+                </div>
+                <!-- Samin Yasar -->
+                <div class="group text-center">
+                    <div class="relative rounded-2xl overflow-hidden mb-4 aspect-square border border-white/10 bg-neutral-900">
+                        <img src="assets/AfricAI/Samin Yasar.JPG" alt="Samin Yasar" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                    </div>
+                    <p class="text-white font-semibold text-sm md:text-base">Samin Yasar</p>
+                </div>
+                <!-- Serdar Bisi -->
+                <div class="group text-center">
+                    <div class="relative rounded-2xl overflow-hidden mb-4 aspect-square border border-white/10 bg-neutral-900">
+                        <img src="assets/AfricAI/Serdar Bisi.jpg" alt="Serdar Bisi" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                    </div>
+                    <p class="text-white font-semibold text-sm md:text-base">Serdar Bisi</p>
+                </div>
+                <!-- Shaz Matthews -->
+                <div class="group text-center">
+                    <div class="relative rounded-2xl overflow-hidden mb-4 aspect-square border border-white/10 bg-neutral-900">
+                        <img src="assets/AfricAI/Shaz Matthews.jpg" alt="Shaz Matthews" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                    </div>
+                    <p class="text-white font-semibold text-sm md:text-base">Shaz Matthews</p>
+                </div>
+                <!-- Taha El Harti -->
+                <div class="group text-center">
+                    <div class="relative rounded-2xl overflow-hidden mb-4 aspect-square border border-white/10 bg-neutral-900">
+                        <img src="assets/AfricAI/Taha El Harti.jpg" alt="Taha El Harti" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                    </div>
+                    <p class="text-white font-semibold text-sm md:text-base">Taha El Harti</p>
+                </div>
+                <!-- Tyler Germain -->
+                <div class="group text-center">
+                    <div class="relative rounded-2xl overflow-hidden mb-4 aspect-square border border-white/10 bg-neutral-900">
+                        <img src="assets/AfricAI/Tyler Germain.jpg" alt="Tyler Germain" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                    </div>
+                    <p class="text-white font-semibold text-sm md:text-base">Tyler Germain</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer CTA -->
+    <section id="apply" class="relative py-32 border-t border-white/10 bg-neutral-950 overflow-hidden">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-orange-500/10 via-black to-black pointer-events-none"></div>
+        <div class="relative z-10 max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-5xl md:text-6xl font-bold tracking-tighter text-white mb-8">
+                Ready to Join?
+            </h2>
+            <p class="text-xl font-semibold text-neutral-400 mb-12 max-w-xl mx-auto">
+                Limited spots available for the most exclusive AI mastermind event of the year.
+            </p>
+            <a href="https://8au6xdlh8hq.typeform.com/to/ugtRaVsu" target="_blank" rel="noopener noreferrer" class="inline-block w-full md:w-auto px-12 py-5 text-lg font-bold text-black bg-white rounded-lg hover:bg-orange-500 hover:text-white transition-all duration-300 shadow-[0_0_20px_rgba(255,255,255,0.2)] hover:shadow-[0_0_30px_rgba(249,115,22,0.4)]">
+                Apply for Membership
+            </a>
+            <div class="mt-12 flex items-center justify-center gap-6 opacity-50">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="mountain" class="lucide lucide-mountain w-6 h-6"><path d="m8 3 4 8 5-5 5 15H2L8 3z"></path></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="waves" class="lucide lucide-waves w-6 h-6"><path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"></path><path d="M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"></path><path d="M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"></path></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" class="lucide lucide-star w-6 h-6"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+            </div>
+            <p class="mt-12 text-sm text-neutral-600">
+                © 2026 AfricAI. All rights reserved. Cape Town.
+            </p>
+        </div>
+    </section>
+
+    <script>
+        lucide.createIcons();
+    </script>
+
+</body></html>
